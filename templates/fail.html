@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Klimax helps you create high-converting Shopify stores. We design, develop, and optimize your store to increase sales. Get a free consultation today!">
+ <!-- fav icon -->
+ <link rel="icon" href="{% static 'images/favicon.png' %}">
+
+ <!-- bootstarp css file -->
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+ <!-- fontawesome icons -->
+ <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+ <!--  toasts file     -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+ <!-- main css file -->
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Shopify Development | Build a High-Converting Shopify Store</title>
+</head>
+
+<body class="body">
+
+    <!-- start scroll to top button -->
+    <div id="progress">
+        <span id="progress-value"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+    </div>
+    <!-- end scroll to top button -->
+
+    <!-- start preLoader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- end preLoader -->
+
+    <!-- ======= start Header ======= -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a href="{% url 'home' %}">
+            <h3 class="heading-2 primary-text">KLIMAX</h3>
+          </a>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav ms-auto" id="navbar">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url 'home' %}#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#stores">Stores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#faq">FAQ's</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#contact">Contact us</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 ms-auto">
+              <button id="mode-toggle" class="btn-light-mode switch-button">
+                <i id="mode-icon" class="fa-solid fa-moon icon-md primary-text"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ======= end Header ======= -->
+
+
+  <!-- ============== Start Hero section ========== -->
+  <section class="hero" style="margin-bottom: 800px;">
+    <div class="container">
+      <div class="d-flex flex-column text-center  gap-32  justify-content-center  align-items-center position-relative">
+        <img class="shape blury" src="{% static 'images/shapes/bbblurry.svg' %}" alt="shape">
+        <div class="d-flex flex-column text-center gap-16 justify-content-center  align-items-center position-relative">
+          <h1 class="heading-1 position-relative ">Something went <span class="text-danger">Wrong</span></h1>
+          <p class="body-1 grey-text position-relative ">Please Try again later</p>
+          <a class="btn" href="{% url 'consultation' %}">Go back to form</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- ============== End Hero section ========== -->
+
+
+
+    <!-- ============== start footer section ========== -->
+    <section class="footer position-relative pt-4 mt-4">
+      <div class="container">
+        <hr class="p-0 m-0">
+        <div class="row justify-content-center align-items-center  my-4 ">
+          <a href="{% url 'home' %}"
+            class="d-flex justify-content-center justify-content-lg-start  col-lg-3 col-md-6 col-12 mt-lg-0 mt-2 ">
+            <h3 class="heading-2 primary-text">Klimax</h3>
+          </a>
+  
+          <div class="d-flex justify-content-center gap-16 col-lg-3 col-md-6 col-12 mt-lg-0 mt-2 ">
+            <a href="{% url 'home' %}#" class="footer-link">home</a>
+            <a href="{% url 'home' %}#services" class="footer-link">services</a>
+            <a href="{% url 'home' %}#stores" class="footer-link">stores</a>
+            <a href="{% url 'home' %}#faq" class="footer-link">FAQ's</a>
+            <a href="{% url 'home' %}#pricing" class="footer-link">pricing</a>
+          </div>
+  
+          <div class="col-lg-3 col-md-6 col-12 d-flex  justify-content-md-end justify-content-center  mt-lg-0 mt-2">
+            <p class="copy">copyright © 2024 Klimax</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============== end footer section ========== -->
+
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.js' %}"></script>
+
+    <script>
+      
+function toggleDarkMode() {
+    const body = document.body;
+    const icon = document.getElementById('mode-icon');
+
+    // Toggle the dark mode class
+    body.classList.toggle('dark-mode');
+
+    // Toggle the icon
+    if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+
+    // Save the user's preference to localStorage
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('dark-mode', isDarkMode);
+}
+
+// Check if user's preference is stored in localStorage
+const isDarkModeSaved = localStorage.getItem('dark-mode');
+
+// Apply the saved preference (if available)
+if (isDarkModeSaved === 'true') {
+    document.body.classList.add('dark-mode');
+} else {
+    document.body.classList.remove('dark-mode');
+}
+
+// Update the icon based on the saved preference
+const icon = document.getElementById('mode-icon');
+if (icon) {
+    if (isDarkModeSaved === 'true') {
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.add('fa-moon');
+    }
+}
+
+// Add event listener to the mode toggle button
+const modeToggle = document.getElementById('mode-toggle');
+if (modeToggle) {
+    modeToggle.addEventListener('click', toggleDarkMode);
+}
+
+
+
+// ---------------- preloader -------------------- //
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+    loader.style.display = "none";
+})
+
+
+// ---------------- back to top button -------------------- //
+
+let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("progress");
+    let porogressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+        scrollProgress.style.display = "grid";
+    }
+    else {
+        scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
+    });
+    scrollProgress.style.background = `conic-gradient(#02f291 ${scrollValue}%, #434e49 ${scrollValue}%)`;
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+
+
+
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+}
+
+function addAnimation() {
+    scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
+    });
+}
+
+function rotateIcon(iconId) {
+    const icon = document.getElementById(iconId);
+    icon.classList.toggle('rotated');
+}
+
+//   ------------- numbers counter -----------------//
+
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1200,
+    });
+});
+
+    </script>
+
+</body>
+
+</html>
